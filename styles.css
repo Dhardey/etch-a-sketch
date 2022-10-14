@@ -1,0 +1,79 @@
+:root {
+    --primary-dark: #333;
+}
+
+.heading{
+    text-align: center;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+body{
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#grid-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+
+.grid-box {
+    color: black;
+    border: black solid 1px;
+}
+
+
+#rgb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#rgb::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#rgb::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid var(--primary-dark);
+    padding: 10px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+button.active{
+    background-color: #333;
+}
+
+.gridRange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
