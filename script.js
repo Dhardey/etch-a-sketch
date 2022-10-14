@@ -60,7 +60,6 @@ function gridSetUp(size)
     }
 }
 
-
 //For Buttons
 const colorBtn = document.getElementById("color");
 const rgbValue = document.getElementById("rgb");
@@ -124,19 +123,6 @@ function btnMode(newMode)
         eraserBtn.classList.add('active');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 window.onload = () => {
     gridSetUp(SIZEDEFAULT);

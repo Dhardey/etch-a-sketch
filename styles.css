@@ -1,14 +1,22 @@
 :root {
-    --primary-dark: #333;
+    --black-coral: #59656F;
+    --actual-black: #1D1E2C;
+    --purple-grey: #AC9FBB;
+    --pink: #DDBDD5;
+    --blush: #F7EBEC;
+    --white: #FFFFFF;
 }
 
 .heading{
     text-align: center;
-    font-family: 'Noto Sans Display', sans-serif;
+    font-family: 'Lato', sans-serif;
+    margin-left: 350px;
+    color: var(--actual-black);
 }
 
 body{
-    font-family: 'Noto Sans Display', sans-serif;
+    font-family: 'Lato', sans-serif;
+    background: var(--blush);
 }
 
 
@@ -17,13 +25,14 @@ main {
     align-items: center;
     justify-content: center;
     gap: 100px;
-    font-family: 'Noto Sans Display', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 
 }
 
@@ -34,8 +43,8 @@ main {
 }
 
 .grid-box {
-    color: black;
     border: black solid 1px;
+    background-color: var(--white);
 }
 
 
@@ -48,6 +57,7 @@ main {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-left: 70px;
 }
 
 #rgb::-webkit-color-swatch {
@@ -62,18 +72,86 @@ main {
 
 button{
     border-radius: 5px;
-    border: 1px solid var(--primary-dark);
+    background-color: var(--purple-grey);
+    border: 1px solid var(--pink);
     padding: 10px;
-    font-family: 'Noto Sans Display', sans-serif;
+    font-family: 'Lato', sans-serif;
+    cursor:pointer;
+    transition-duration: 0.4s;
 }
 
+button:hover{
+    background-color: var(--black-coral);
+    color: var(--pink);
+}
 button.active{
-    background-color: #333;
+    background-color: var(--black-coral);
+    color: var(--pink);
 }
 
 .gridRange {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--actual-black)
+}
 
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ac9fbb;
+  border-radius: 1rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #59656f;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #59656f;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #ac9fbb;
+  border-radius: 1rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #59656f;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #59656f;
+  outline-offset: 0.125rem;
 }
